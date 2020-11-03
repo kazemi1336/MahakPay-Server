@@ -1,0 +1,12 @@
+.vs
+MahakPay.Common/bin
+MahakPay.Common/obj
+MahakPay.Data/bin
+MahakPay.Data/obj
+MahakPay.Presentation/bin
+MahakPay.Presentation/obj
+MahakPay.Repo/bin
+MahakPay.Repo/obj
+MahakPay.Services/bin
+MahakPay.Services/obj
+
