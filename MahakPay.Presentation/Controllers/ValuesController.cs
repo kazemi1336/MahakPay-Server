@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MahakPay.Data.DatabaseContext;
+using MahakPay.Data.Infrastructure;
+using MahakPay.Data.Models;
+//using MahakPay.Data. ;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -12,11 +16,39 @@ namespace MahakPay.Presentation.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly IUnitOfWork<MahakDbContext> _db;
+        public ValuesController(IUnitOfWork<MahakDbContext> dbContext)
+        {
+            _db = dbContext;
+        }
         // GET api/values
         [HttpGet]
         public async Task<ActionResult<IEnumerable<string>>> Get()
         {
-            return new string[] { "value1", "value2" };
+            //return new string[] { "value1", "value2" };
+            //var user = new User()
+            //{
+            //    Address = "",
+            //    City = "",
+            //    DateOfBirth = "",
+            //    Gender = "",
+            //    IsAcive = true,
+            //    Name = "",
+
+            //    PasswordHash = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, },
+            //    PasswordSalt = new byte[] { 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, },
+
+            //    PhoneNumber = "",
+            //    Status = true,
+            //    UserName = ""
+            //};
+
+            //await _db.UserRepository.InsertAsync(user);
+            //await _db.SaveAsync();
+
+            //var model = await _db.UserRepository.GetAllAsync();
+            return Ok("KAZEMI");
+           
         }
         // GET api/values/5
         [HttpGet("{id}")]

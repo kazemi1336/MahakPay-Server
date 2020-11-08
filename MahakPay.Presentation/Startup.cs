@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MahakPay.Data.Infrastructure;
+using MahakPay.Data.DatabaseContext;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +30,7 @@ namespace MahakPay.Presentation
             services.AddControllers()
                 .AddNewtonsoftJson();
             services.AddCors();
+            services.AddScoped<IUnitOfWork<MahakDbContext>, UnitOfWork<MahakDbContext>>();
         }
 
         //// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

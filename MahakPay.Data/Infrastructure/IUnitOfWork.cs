@@ -1,4 +1,5 @@
-﻿using MahakPay.Data.Repositories.Repo;
+﻿using MahakPay.Data.Repositories.Interface;
+using MahakPay.Data.Repositories.Repo;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace MahakPay.Data.Infrastructure
 {
     public interface IUnitOfWork<TContext> : IDisposable where TContext : DbContext
     {
-        UserRepository UserRepository { get; }
+        IUserRepository UserRepository { get; }
         void Save();
         Task<int> SaveAsync();
     }

@@ -6,7 +6,7 @@ using MahakPay.Data.Models;
 
 namespace MahakPay.Data.DatabaseContext
 {
-    class MahakDbContext : DbContext
+    public class MahakDbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {

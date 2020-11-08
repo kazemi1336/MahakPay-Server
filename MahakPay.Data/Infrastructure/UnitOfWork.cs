@@ -1,4 +1,5 @@
-﻿using MahakPay.Data.Repositories.Repo;
+﻿using MahakPay.Data.Repositories.Interface;
+using MahakPay.Data.Repositories.Repo;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -18,8 +19,8 @@ namespace MahakPay.Data.Infrastructure
         #endregion
 
         #region privaterepository
-        private UserRepository userRepository;
-        public UserRepository UserRepository
+        private IUserRepository userRepository;
+        public IUserRepository UserRepository
         {
             get
             {
